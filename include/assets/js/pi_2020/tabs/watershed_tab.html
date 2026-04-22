@@ -1,0 +1,669 @@
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header mb-5">
+		<div class="d-flex">
+			<h5>Area under watershed management <br> <span class="font-14px"> Area in Hectares </span></h5>
+		</div>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-1"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-1"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="w-100 mpContent" id="graph-1">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="row">
+					<div class="col-md-6">
+						<span class="seed_text_count">Direct area</span><br>
+						<span class="count_text">estimated</span>
+					</div>
+					<div class="col-md-6">
+						<span class="seed_text_count" id="ws-di-area"></span>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-md-6">
+						<span class="seed_text_count">Indirect area</span><br>
+						<span class="count_text">estimated spill over</span>
+					</div>
+					<div class="col-md-6">
+						<span class="seed_text_count" id="ws-indi-area"></span>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-md-6">
+						<span class="seed_text_count">Number of watersheds</span><br>
+						<span class="count_text"></span>
+					</div>
+					<div class="col-md-6">
+						<span class="seed_text_count" id="ws-indi-area-watersheds-count"></span>
+					</div>
+				</div>
+
+				<div class="row mt-4">
+					<div class="col-md-6">
+						<span class="seed_text_count">Number of countries</span><br>
+						<span class="count_text"></span>
+					</div>
+					<div class="col-md-6">
+						<span class="seed_text_count" id="ws-indi-area-countries-count"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="">
+					<ul class="d-flex filter" style="position: relative;">
+						<li style="position: absolute; right: 6px; top: -18px;"><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+								data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+			
+							<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+								<a class="dropdown-item" id="dwn-csv-01"> Download CSV</a>
+							</div>
+						</li>
+					</ul>
+					<div class="tooltip-body" style="overflow-y: auto;">
+						<table class="table table-sm table-bordered" id="table-01-main">
+							<thead class="tooltip-header">
+								<th>Project name</th>
+								<th width="20%">Year of <br>establishment</th>
+								<th>Direct area (ha)</th>
+								<th>Indirect area (ha)</th>
+							</thead>
+							<tbody id="tt-dir-list"></tbody>
+							<tfoot id="tt-dir-list-tfoot" style="font-weight: 600;">
+							</tfoot>
+						</table>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div id="mpr-mapAreaunderwatershed" style="width: 100%;height: 250px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 mpContent" id="table-1" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-1-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>Type</th>
+								<th>Area (ha)</th>
+							</tr>
+						</thead>
+						<tbody id="table-1-tbody">
+						</tbody>
+						<tfoot id="table-1-tfoot" style="font-weight: 600;"></tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hybrid / varieties released across countries  map commented based on new suggitions-->
+<!-- <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header mb-5">
+		<h5>Area under watershed management across countries</h5>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Map-Selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-2"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-2"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-2"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="w-100 mpContent" id="graph-2">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div id="mpr-mapAreaunderwatershedmanagementcountries" style="height: 500px; width: 100%;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 mpContent" id="table-2" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-2-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>Country</th>
+								<th>Area (ha)</th>
+							</tr>
+						</thead>
+						<tbody id="table-2-tbody">
+						</tbody>
+						<tfoot id="table-2-tfoot" style="font-weight: 600;"></tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- //Hybrid / varieties released across countries -->
+<!-- Country wise spatial outreach -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header mb-5">
+		<h5>Country wise spatial outreach</h5>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-10"><img src="img/Map-Selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-10"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-10"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-10"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-10"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="w-100 mpContent" id="graph-10">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div id="mpr-mapCountrywisespatialoutreach" style="height: 500px; width: 100%;z-index: 0"></div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="w-100 mpContent" id="table-10" style="display: none">
+	<div class="row align-items-center">
+	<div class="col-md-12">
+	<div class="table-responsive">
+	<table class="table table-striped" id="table-10-main">
+	<thead>
+	<tr class="bg-table-10">
+	<th>Project Name</th>
+	<th>Village</th>
+	<th>Latitude</th>
+	<th>Longitude</th>
+	</tr>
+	</thead>
+	<tbody id="table-10-tbody">
+	</tbody>
+	</table>
+	</div>
+	</div>
+	</div>
+	</div> -->
+
+	<div class="w-100 mpContent" id="table-10" style="display: none;">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped table-bordered" id="table-10-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>Project Name</th>
+								<th>Village</th>
+								<th>Latitude</th>
+								<th>Longitude</th>
+							</tr>
+						</thead>
+						<tbody id="table-10-tbody">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Country wise spatial outreach -->
+
+
+<!-- Contribution to CRPs -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header">
+		<h5>Watershed interventions mapped to SDGs</h5>
+		<!-- <ul class="d-flex filter">
+			<!-- <li><a href="javascript:void(0)" class="active" id="graph-btn-3"><img src="img/Sankey-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-3"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li> --
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-3"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" href="#"> Download graph snapshot</a>
+					<!-- <div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#"> Download CSV</a> --
+				</div>
+			</li>
+		</ul> -->
+	</div>
+	<ul class="d-flex crop_check pl-0 mb-4">
+		<li>
+			<label class="msRadio-label text-info"> Country
+				<input type="radio" checked="checked" name="sankey-sdg-radio" value="1">
+				<span class="msRadio-check one"></span>
+			</label>
+		</li>
+		<li>
+			<label class="msRadio-label text-info ml-5"> CRP
+				<input type="radio" name="sankey-sdg-radio" value="2">
+				<span class="msRadio-check one"></span>
+			</label>
+		</li>
+
+		<li>
+			<label class="msRadio-label text-info ml-5"> Research Program
+				<input type="radio" name="sankey-sdg-radio" value="3">
+				<span class="msRadio-check one"></span>
+			</label>
+		</li>
+	</ul>
+
+	<div class="w-100 mpContent" id="graph-3">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div id="mpr-watershedinterventionmaped" style="width:100%;height: 400px;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="w-100 mpContent" id="table-3" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+							<tr class="bg-table-1">
+								<!-- <th>Country</th>
+								<th>Breeding Material</th>
+								<th>Hybrid Lines</th>
+								<th>Germplasm</th> -->
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- //Contribution to CRPs -->
+
+
+<!-- Comparison of seeds produced across countries -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header mb-5">
+		<div class="d-flex">
+			<h5>CRP-wise area under watershed management</h5>
+		</div>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-4"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-4"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-4"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="w-100 mpContent" id="graph-4">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div id="mpr-mapCRPwiseareaunderwatershedmanagement"></div>
+			</div>
+			<!-- <div class="col-md-6">
+				<div id="mpr-mapCRPwiseareaunderwatershedmanagement-indirect"></div>
+			</div> -->
+		</div>
+	</div>
+
+	<div class="w-100 mpContent" id="table-4" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-4-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>CRP</th>
+								<th>Direct area (ha)</th>
+								<th>Indirect area (ha)</th>
+								<th>Total (ha)</th>
+							</tr>
+						</thead>
+						<tbody id="table-4-tbody">
+						</tbody>
+						<tfoot id="table-4-tfoot" style="font-weight: 600;">
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Comparison of seeds produced across countries -->
+
+
+<!-- Comparison of seeds produced across countries -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+	<div class="mpContent-header mb-5">
+		<div class="d-flex">
+			<h5>Research program-wise area under watershed management</h5>
+		</div>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-5"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-5"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-5"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-5"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-5"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- <div class="w-100 mpContent" id="graph-5">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div id="mpr-mapResearchprogramwiseunderwatershed"></div>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="w-100 mpContent" id="graph-5">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div id="mpr-mapResearchprogramwiseunderwatershed"></div>
+			</div>
+			<div class="col-md-6">
+				<div id="mpr-mapResearchprogramwiseunderwatershed-indirect"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 mpContent" id="table-5" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-5-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>Research program</th>
+								<th>Direct area (ha)</th>
+								<th>Indirect area (ha)</th>
+								<th>Total (ha)</th>
+							</tr>
+						</thead>
+						<tbody id="table-5-tbody">
+						</tbody>
+						<tfoot id="table-5-tfoot" style="font-weight: 600;">
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Comparison of seeds produced across countries -->
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+			<div class="mpContent-header mb-3">
+				<h5>Scientific publications</h5>
+				<ul class="d-flex filter">
+					<li><a href="javascript:void(0)" class="active" id="graph-btn-6"><img
+								src="img/Pie-selected.svg"></a></li>
+					<li><a href="javascript:void(0)" class="" id="table-btn-6"><img src="img/Table.svg"></a></li>
+					<li><a href="javascript:void(0)" class="trans">|</a></li>
+					<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+							data-toggle="dropdown" aria-expanded="false" id="download-btn-6"><img
+								src="img/download.svg"></a>
+
+						<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+							<a class="dropdown-item" id="dwn-img-6"> Download graph snapshot</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" id="dwn-csv-6"> Download CSV</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="w-100 mpContent" id="graph-6">
+				<div class="row align-items-top">
+					<div class="col-lg-12">
+						<div id="mpr-pieChartType3"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="w-100 mpContent" id="table-6" style="display: none">
+				<div class="row align-items-center">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-striped" id="table-6-main">
+								<thead>
+									<tr class="bg-table-1">
+										<th>Publication Status</th>
+										<th>Number</th>
+										<th>Percentage</th>
+									</tr>
+								</thead>
+								<tbody id="table-6-tbody">
+								</tbody>
+								<tr>
+									<th>Total</th>
+									<th id="table-6-total-count"></th>
+									<th> 100 % </th>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+	<div class="mpContent-header mb-3">
+		<h5>Area under watershed management over years</h5>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-7"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-7"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-7"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-7"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-7"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="w-100 mpContent" id="graph-7">
+		<div class="row align-items-top">
+			<div class="col-lg-6">
+				<div id="ws-year-graph"></div>
+			</div>
+			<div class="col-lg-6">
+				<div id="ws-year-graph-indirect"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="w-100 mpContent" id="table-7" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-7-main">
+						<thead>
+							<tr class="bg-table-1">
+								<th>Year</th>
+								<th>Direct area</th>
+								<th>Indirect area</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody id="table-7-tbody">
+						</tbody>
+						<tfoot id="table-7-tfoot" style="font-weight: 600;">
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+	<div class="mpContent-header mb-5">
+		<div class="d-flex">
+			<h5>Comparison of Area under watershed management over years (CRPs)</h5>
+			<span class="ml-2 mr-2">|</span>
+			<div class="dropdown dropdown-user nav-item float-right">
+				<a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+					<span id="year-comp-crp-name">All Types</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" id="year-comp-crps">
+				</div>
+			</div>
+		</div>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-8"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-8"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-8"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-8"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-8"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="w-100 mpContent" id="graph-8">
+		<div class="row align-items-top">
+			<div class="col-lg-6">
+				<!-- <div id="wm-year-crp-graph"></div> -->
+				<div id="wm-year-crp-graph-dir"></div>
+			</div>
+			<div class="col-lg-6">
+				<div id="wm-year-crp-graph-indir"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="w-100 mpContent" id="table-8" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-8-main">
+						<thead>
+							<tr class="bg-table-1" id="table-8-thead-row">
+							</tr>
+						</thead>
+						<tbody id="table-8-tbody">
+						</tbody>
+						<tfoot id="table-8-tfoot" style="font-weight: 600;">
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+	<div class="mpContent-header mb-5">
+		<div class="d-flex">
+			<h5>Comparison of Area under watershed management over years (country-wise)</h5>
+			<span class="ml-2 mr-2">|</span>
+			<div class="dropdown dropdown-user nav-item float-right">
+				<a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+					<span id="year-comp-contries" data-value="0">All Types</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" id="year-comp-contry">
+				</div>
+			</div>
+		</div>
+		<ul class="d-flex filter">
+			<li><a href="javascript:void(0)" class="active" id="graph-btn-9"><img src="img/Bar-selected.svg"></a></li>
+			<li><a href="javascript:void(0)" class="" id="table-btn-9"><img src="img/Table.svg"></a></li>
+			<li><a href="javascript:void(0)" class="trans">|</a></li>
+			<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+					data-toggle="dropdown" aria-expanded="false" id="download-btn-9"><img src="img/download.svg"></a>
+
+				<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+					<a class="dropdown-item" id="dwn-img-9"> Download graph snapshot</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" id="dwn-csv-9"> Download CSV</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="w-100 mpContent" id="graph-9">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div id="contry-year-wise-graphs-dir"></div>
+			</div>
+			<div class="col-md-6">
+				<div id="contry-year-wise-graphs-indir"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 mpContent" id="table-9" style="display: none">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped" id="table-9-main">
+						<thead>
+							<tr class="bg-table-1" id="table-9-thead-row">
+							</tr>
+						</thead>
+						<tbody id="table-9-tbody">
+						</tbody>
+						<tfoot id="table-9-tfoot" style="font-weight: 600;">
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

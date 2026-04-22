@@ -1,0 +1,731 @@
+
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<section>
+
+  <!-- <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+          <div class="mpContent-header mb-5">
+            <div class="d-flex">
+              <h5>Area under soil management <br> <span class="font-14px"> Quantity in hectares</span></h5>
+            </div>
+    
+             <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+    
+                                <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                                    <a class="dropdown-item" href="#"> Download graph snapshot</a>
+                                    <div class="dropdown-divider"></div> 
+                                    <a class="dropdown-item" id="dwn-csv-0"> Download CSV</a>
+                                </div>
+                            </li>
+            </ul>
+          </div>
+          <div class="w-100 mpContent">
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <span class="seed_text_count">Direct area</span><br>
+                       <span class="count_text">estimated</span>
+                    </div>
+                    <div class="col-md-2">
+                      <span class="seed_text_count" id="sm-direct-area"></span>
+                    </div>
+                    <div class="col-md-1">
+                      <div class="dropright toogle-tooltip">
+                        <a href="javascript:void(0);" class=" dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false"><img src="img/info-icon.svg"></a>
+                        <div class="dropdown-menu">
+                          <div class="tooltip-header">
+                            <div class="tooltip-header-title">
+                              <span>Direct Area</span>
+                            </div>
+                          </div>
+                          <div class="tooltip-body">
+                            <table class="table table-sm table-bordered">
+                              <thead><th width="60%">Project Name</th><th width="400%">Direct Area (ha)</th></thead>
+                              <tbody  id="ss-dir-list"></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                     
+                  </div>
+              </div>
+              <div class="col-md-6" style="display: none;">
+                <table id="table-0-main">
+                  <thead><tr><th>Type</th><th>Area</th></tr></thead>
+                  <tbody id="table-0-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+    
+          </div>
+        </div> -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header mb-5">
+      <div class="d-flex">
+        <h5>Area under soil management <br> <span class="font-14px"> Area in Hectares </span></h5>
+      </div>
+
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <!-- <a class="dropdown-item" href="#"> Download graph snapshot</a>
+          <div class="dropdown-divider"></div> -->
+            <a class="dropdown-item" id="dwn-csv-0"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-100 mpContent">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="seed_text_count">Direct area</span><br>
+              <span class="count_text">estimated</span>
+            </div>
+            <div class="col-md-2">
+              <span class="seed_text_count" id="sm-direct-area"></span>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <span class="seed_text_count">Number of projects</span><br>
+              <span class="count_text"></span>
+            </div>
+            <div class="col-md-2">
+              <span class="seed_text_count" id="sm-direct-projects_count"></span>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <span class="seed_text_count">Number of countries</span><br>
+              <span class="count_text"></span>
+            </div>
+            <div class="col-md-2">
+              <span class="seed_text_count" id="sm-direct-countries_count"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="">
+            <ul class="d-flex filter" style="position: relative;">
+              <li style="position: absolute; right: 6px; top: -18px;"><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                  data-toggle="dropdown" aria-expanded="false" id="download-btn-00"><img src="img/download.svg"></a>
+        
+                <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                  <a class="dropdown-item" id="dwn-csv-00"> Download CSV</a>
+                </div>
+              </li>
+            </ul>
+            <div class="tooltip-body" style="height: 180px;
+          overflow-y: auto;">
+              <table class="table table-sm table-bordered" id="table-00-main">
+                <thead class="tooltip-header">
+                  <th width="30%">Project name</th>
+                  <th width="40%">Direct area (ha)</th>
+                </thead>
+                <tbody id="ss-dir-list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="display: none;">
+          <table id="table-0-main">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Area</th>
+              </tr>
+            </thead>
+            <tbody id="table-0-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Hybrid / varieties released across countries -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header mb-5">
+      <h5>Area under soil management across countries</h5>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img src="img/Map-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-1"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-1"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-100 mpContent" id="graph-1">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div id="sm-country-map" style="height: 500px; width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-1" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-1-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Country</th>
+                  <th>Direct Area (ha)</th>
+                  <!-- <th>Indirect Area</th> -->
+                </tr>
+              </thead>
+              <tbody id="table-1-tbody">
+              </tbody>
+              <tfoot id="table-1-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Hybrid / varieties released across countries -->
+  <!-- Country wise spatial outreach -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header mb-5">
+      <h5>Country wise spatial outreach</h5>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-10"><img src="img/Map-Selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-10"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-10"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-10"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-10"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-100 mpContent" id="graph-10">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div id="mpr-mapCountrywisespatialoutreach_soilmgmt" style="height: 500px; width: 100%;z-index: 0"></div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 mpContent" id="table-10" style="display: none;">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="table-10-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Project Name</th>
+                  <th>Village</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+                </tr>
+              </thead>
+              <tbody id="table-10-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Country wise spatial outreach -->
+
+  <!-- Contribution to CRPs -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header">
+      <h5>Soil management interventions mapped to SDGs</h5>
+      <!-- <ul class="d-flex filter">
+        <!-- <li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Sankey-selected.svg"></a></li>
+               <li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+               <li><a href="javascript:void(0)" class="trans">|</a></li> --
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-2"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" href="#"> Download graph snapshot</a>
+            <!-- <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"> Download CSV</a> --
+          </div>
+        </li>
+      </ul> -->
+    </div>
+    <ul class="d-flex crop_check pl-0 mb-4">
+      <li>
+        <label class="msRadio-label text-info"> Country
+          <input type="radio" name="sm-sdg-tab" value="1" checked>
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+      <li>
+        <label class="msRadio-label text-info ml-5"> CRP
+          <input type="radio" name="sm-sdg-tab" value="2">
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+
+      <li>
+        <label class="msRadio-label text-info ml-5"> Research Program
+          <input type="radio" name="sm-sdg-tab" value="3">
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+    </ul>
+
+    <div class="w-100 mpContent">
+      <div class="row align-items-center" id="graph-2">
+        <div class="col-md-12">
+          <div id="sm-sdg-country"></div>
+          <div id="sm-sdg-crp"></div>
+          <div id="sm-sdg-rp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-2" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr class="bg-table-1">
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!-- Soil Types -->
+	<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header">
+      <h5>Soil management interventions mapped to soil types</h5>
+      <!-- <ul class="d-flex filter">
+        <!-- <li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Sankey-selected.svg"></a></li>
+               <li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+               <li><a href="javascript:void(0)" class="trans">|</a></li> --
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-soil-type"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" href="#"> Download graph snapshot</a>
+            <!-- <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"> Download CSV</a> --
+          </div>
+        </li>
+      </ul> -->
+    </div>
+    <ul class="d-flex crop_check pl-0 mb-4">
+      <li>
+        <label class="msRadio-label text-info"> Country
+          <input type="radio" name="sm-soilType-tab" value="1" checked>
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+      <li>
+        <label class="msRadio-label text-info ml-5"> CRP
+          <input type="radio" name="sm-soilType-tab" value="2">
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+
+      <li>
+        <label class="msRadio-label text-info ml-5"> Research Program
+          <input type="radio" name="sm-soilType-tab" value="3">
+          <span class="msRadio-check one"></span>
+        </label>
+      </li>
+    </ul>
+
+    <div class="w-100 mpContent">
+      <div class="row align-items-center" id="graph-soil-type">
+        <div class="col-md-12">
+          <div id="sm-soil-type-country"></div>
+          <div id="sm-soil-type-crp"></div>
+          <div id="sm-soil-type-rp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-soil-type" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr class="bg-table-1">
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Contribution to CRPs -->
+
+
+  <div class="row">
+    <div class="col-md-6">
+
+  <!-- Comparison of seeds produced across countries -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header mb-5">
+      <div class="d-flex">
+        <h5>CRP-wise area under soil management</h5>
+      </div>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-3"><img src="img/Bar-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-3"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="trans">|</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-3"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-3"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-3"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-100 mpContent" id="graph-3">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div id="sm-crp-area-graph"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-3" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-3-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>CRP</th>
+                  <th>Direct Area (ha)</th>
+                  <!-- <th>Indirect Area</th> -->
+                </tr>
+              </thead>
+              <tbody id="table-3-tbody">
+              </tbody>
+              <tfoot id="table-3-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Comparison of seeds produced across countries -->
+    </div>
+    <div class="col-md-6">
+
+  <!-- Comparison of seeds produced across countries -->
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header mb-5">
+      <div class="d-flex">
+        <h5>Research program-wise area under soil management</h5>
+      </div>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img src="img/Bar-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="trans">|</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-4"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-4"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-4"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-100 mpContent">
+      <div class="row align-items-center" id="graph-4">
+        <div class="col-md-12">
+          <div id="sm-rp-area-graph"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-4" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-4-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Research Program</th>
+                  <th>Direct Area (ha)</th>
+                  <!-- <th>Indirect Area</th> -->
+                </tr>
+              </thead>
+              <tbody id="table-4-tbody">
+              </tbody>
+              <tfoot id="table-4-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Comparison of seeds produced across countries -->
+    </div>
+  </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-3">
+          <h5>Scientific publications</h5>
+          <ul class="d-flex filter">
+            <li><a href="javascript:void(0)" class="active" id="graph-btn-5"><img src="img/Pie-selected.svg"></a></li>
+            <li><a href="javascript:void(0)" class="" id="table-btn-5"><img src="img/Table.svg"></a></li>
+            <li><a href="javascript:void(0)" class="trans">|</a></li>
+            <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                data-toggle="dropdown" aria-expanded="false" id="download-btn-5"><img src="img/download.svg"></a>
+
+              <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                <a class="dropdown-item" id="dwn-img-5"> Download graph snapshot</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" id="dwn-csv-5"> Download CSV</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-5">
+          <div class="row align-items-top">
+            <div class="col-lg-12">
+              <div id="sm-sp-graph"></div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 mpContent" id="table-5" style="display: none">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table table-striped" id="table-5-main">
+                  <thead>
+                    <tr class="bg-table-1">
+                      <th>Publication Status</th>
+                      <th>Number</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-5-tbody">
+                  </tbody>
+                  <tfoot id="table-5-tfoot" style="font-weight: 600;">
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-3">
+      <h5>Area under soil management (year-wise)</h5>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-6"><img src="img/Bar-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-6"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="trans">|</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-6"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-6"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-60 mpContent" id="graph-6">
+      <div class="row align-items-top">
+        <div class="col-lg-12">
+          <div id="sm-yearwise-graph"></div>
+        </div>
+      </div>
+    </div>
+    <div class="w-60 mpContent" id="table-6" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-6-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Year</th>
+                  <th>Direct Area</th>
+                  <!-- <th>Indirect Area</th> -->
+                  <!-- <th>Total Area</th> -->
+                </tr>
+              </thead>
+              <tbody id="table-6-tbody">
+              </tbody>
+              <tfoot id="table-6-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-5">
+      <div class="d-flex">
+        <h5>Comparison of Area under soil management over years (CRPs)</h5>
+        <span class="ml-2 mr-2">|</span>
+        <div class="dropdown dropdown-user nav-item float-right">
+          <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <span id="year-comp-crp-name">All Types</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" id="year-comp-crps">
+          </div>
+        </div>
+      </div>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-7"><img src="img/Bar-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-7"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="trans">|</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-7"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-7"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-7"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-100 mpContent" id="graph-7">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div id="sm-year-crp-graph"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-7" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-7-main">
+              <thead>
+                <tr class="bg-table-1" id="table-7-thead-row">
+                </tr>
+              </thead>
+              <tbody id="table-7-tbody">
+              </tbody>
+              <tfoot id="table-7-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-5">
+      <div class="d-flex">
+        <h5>Comparison of Area under soil management over years (country-wise)</h5>
+        <span class="ml-2 mr-2">|</span>
+        <div class="dropdown dropdown-user nav-item float-right">
+          <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <span id="year-contry-name">All Types</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" id="year-contry">
+          </div>
+        </div>
+      </div>
+      <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-8"><img src="img/Bar-selected.svg"></a></li>
+        <li><a href="javascript:void(0)" class="" id="table-btn-8"><img src="img/Table.svg"></a></li>
+        <li><a href="javascript:void(0)" class="trans">|</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+            aria-expanded="false" id="download-btn-8"><img src="img/download.svg"></a>
+
+          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+            <a class="dropdown-item" id="dwn-img-8"> Download graph snapshot</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="dwn-csv-8"> Download CSV</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-100 mpContent" id="graph-8">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div id="sm-year-contry-graph"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mpContent" id="table-8" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-8-main">
+              <thead>
+                <tr class="bg-table-1" id="table-8-thead-row">
+                </tr>
+              </thead>
+              <tbody id="table-8-tbody">
+              </tbody>
+              <tfoot id="table-8-tfoot" style="font-weight: 600;">
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

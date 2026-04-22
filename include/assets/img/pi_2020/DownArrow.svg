@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Down Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Down-Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+        <path d="M13,12 L13,17 L12,17 L12,12 L9,12 L12.5,7 L16,12 L13,12 Z" id="Combined-Shape" stroke="#E95652" fill="#E95652" stroke-linejoin="round" transform="translate(12.500000, 12.000000) scale(1, -1) translate(-12.500000, -12.000000) "></path>
+    </g>
+</svg>

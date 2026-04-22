@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<kml>
+  <Placemark>
+    <name>PLOT-12345</name>
+    <Polygon>
+      <extrude>1</extrude>
+      <altitudeMode>relativeToGround</altitudeMode>
+      <outerBoundaryIs>
+        <LinearRing>
+          <coordinates>78.3922117,17.4501966,100 
+78.3922225,17.4501725,100 
+78.39227,17.4499464,100 
+</coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+      <innerBoundaryIs>
+        <LinearRing>
+          <coordinates>78.3922117,17.4501966,100 
+78.3922225,17.4501725,100 
+78.39227,17.4499464,100 
+</coordinates>
+        </LinearRing>
+      </innerBoundaryIs>
+    </Polygon>
+  </Placemark>
+</kml>

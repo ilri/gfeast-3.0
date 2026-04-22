@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Sankey</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Graph-Icons" transform="translate(-439.000000, -267.000000)">
+            <g id="Icon/Sankey" transform="translate(434.000000, 263.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="36" height="34" rx="5.20000029"></rect>
+                <polygon id="Rectangle" fill="#C76767" opacity="0.300000012" points="7 4 29 4 29.2899317 12 7 15"></polygon>
+                <polygon id="Rectangle" fill="#C76767" opacity="0.300000012" points="7 18 29 15 29.2899317 30 7 30"></polygon>
+                <polygon id="Rectangle" fill="#C76767" opacity="0.300000012" points="7 4 29 15 28.6965108 30 7 15"></polygon>
+                <rect id="Rectangle" fill="#C76767" x="5" y="4" width="4" height="11" rx="1"></rect>
+                <rect id="Rectangle" fill="#C76767" x="5" y="18" width="4" height="12" rx="1"></rect>
+                <rect id="Rectangle" fill="#C76767" x="27" y="15" width="4" height="15" rx="1"></rect>
+                <path d="M28,4 L30,4 C30.5522847,4 31,4.44771525 31,5 L31,11 C31,11.5522847 30.5522847,12 30,12 L28,12 C27.4477153,12 27,11.5522847 27,11 L27,5 C27,4.44771525 27.4477153,4 28,4 Z" id="Rectangle" fill="#C76767"></path>
+            </g>
+        </g>
+    </g>
+</svg>

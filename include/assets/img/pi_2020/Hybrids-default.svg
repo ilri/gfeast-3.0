@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Hybrids-default</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KPI-Icons" transform="translate(-340.000000, -217.000000)">
+            <g id="Icon/Hybrids-default" transform="translate(339.000000, 215.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="32" height="32"></rect>
+                <path d="M16.8323428,21.906896 C20.8489591,21.906896 24.10507,25.1630069 24.10507,29.1796232 L24.10507,29.1796232 L9.55961549,29.1796232 C9.55961549,25.1630069 12.8157264,21.906896 16.8323428,21.906896 Z" id="Rectangle" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.8323428,21.906896 C16.6979701,19.0691604 17.6311414,15.8917583 19.6318565,12.3746895 C21.6325716,8.85762072 24.3899274,5.82643465 27.9039239,3.2811313" id="Path-4" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.8196576,21.906896 C16.2649614,18.0759907 14.6816789,14.7021691 12.0698102,11.7854311 C9.4579414,8.86869304 6.37543575,6.17243109 2.82229322,3.69664522" id="Path-9" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M19.9511604,11.9742972 C19.191291,9.83306382 19.5307691,7.84287325 20.9695949,6.00372549 C22.4084206,4.16457773 24.7198636,3.19797909 27.9039239,3.10392958 C28.365156,6.37217231 27.9883695,8.77782268 26.7735645,10.3208807 C25.5587595,11.8639387 23.2846248,12.4150775 19.9511604,11.9742972 Z" id="Path-10" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3.07862265,14.4021601 C2.11958422,11.557447 2.62028223,8.88214907 4.58071668,6.37626631 C6.54115114,3.87038354 9.69054747,2.63406805 14.0289057,2.66731985 C14.92529,6.44405148 14.4119095,9.64110934 12.488764,12.2584934 C10.5656185,14.8758775 7.42890475,15.590433 3.07862265,14.4021601 Z" id="Path-10" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" transform="translate(8.531217, 8.812682) rotate(-90.000000) translate(-8.531217, -8.812682) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

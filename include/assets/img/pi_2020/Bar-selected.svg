@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="34px" viewBox="0 0 36 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Bar-selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PID_KPI_OAR-2" transform="translate(-1240.000000, -308.000000)">
+            <g id="Hybrids-released" transform="translate(340.000000, 284.000000)">
+                <g id="Button-panel" transform="translate(900.000000, 24.000000)">
+                    <g id="Icon/Bar-selected">
+                        <rect id="Rectangle" fill="#C76767" x="0" y="0" width="36" height="34" rx="5.20000029"></rect>
+                        <g id="Group-8" transform="translate(9.000000, 7.153846)" fill="#FFFFFF" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                            <path d="M1.29896094e-13,4.20996571e-13 L3.85714286,4.20996571e-13 L3.85714286,20.6923077 L1.29896094e-13,20.6923077 L1.29896094e-13,4.20996571e-13 Z M7.71428571,3.05886288 L11.5714286,3.05886288 L11.5714286,20.6923077 L7.71428571,20.6923077 L7.71428571,3.05886288 Z M15.4285714,7.64715719 L19.2857143,7.64715719 L19.2857143,20.6923077 L15.4285714,20.6923077 L15.4285714,7.64715719 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

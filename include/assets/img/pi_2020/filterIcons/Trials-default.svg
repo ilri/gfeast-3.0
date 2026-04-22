@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Trials-default</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KPI-Icons" transform="translate(-341.000000, -697.000000)">
+            <g id="Icon/Trials-default" transform="translate(339.000000, 695.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="32" height="32"></rect>
+                <polygon id="Rectangle" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" points="3.2 23.2 8.9978061 23.2 8.9978061 19.2 22.789874 19.2 22.789874 23.2 28.8 23.2 28.8 28.8 3.2 28.8"></polygon>
+                <path d="M16,14.4 C18.6509668,14.4 20.8,16.5490332 20.8,19.2 L20.8,19.2 L11.2,19.2 C11.2,16.5490332 13.3490332,14.4 16,14.4 Z" id="Rectangle" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.7326081,14.2511153 C15.6535654,12.5818591 16.2024897,10.712799 17.3793809,8.643935 C18.5562722,6.57507101 20.1782462,4.79202038 22.2453029,3.29478312" id="Path-4" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M15.7251463,14.2511153 C15.3988544,11.9976416 14.4675118,10.0130406 12.9311184,8.29731238 C11.394725,6.58158414 9.58148637,4.9955477 7.49140252,3.53920307" id="Path-9" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17.5672068,8.40841012 C17.1202247,7.14886107 17.3199178,5.97816074 18.1662859,4.89630911 C19.0126539,3.81445749 20.3723263,3.24587005 22.2453029,3.19054681 C22.5166159,5.11304254 22.2949768,6.52813099 21.5803856,7.43581217 C20.8657945,8.34349335 19.5280682,8.66769267 17.5672068,8.40841012 Z" id="Path-10" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.64218454,9.83656475 C7.07804429,8.16320412 7.37257253,6.58949945 8.52576927,5.11545077 C9.67896601,3.64140208 11.5315521,2.91415768 14.0835275,2.93371756 C14.6108124,5.1553244 14.3088239,7.03594667 13.1775618,8.57558436 C12.0462998,10.1152221 10.201174,10.5355489 7.64218454,9.83656475 Z" id="Path-10" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.849593, 6.548636) rotate(-90.000000) translate(-10.849593, -6.548636) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

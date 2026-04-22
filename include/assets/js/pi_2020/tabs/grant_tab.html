@@ -1,0 +1,490 @@
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<section>
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3 mpContent">
+					<h1>
+						<span>Total number of active projects : </span>
+						<font id="total_active_projects"></font>
+					</h1>
+
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row">
+						<div class="col-lg-4">
+
+
+							<div class="">
+								<div class="tooltip-header">
+									<div class="tooltip-header-title">
+										<span> Active projects </span>
+
+										<span id="dwn-csv-0"><img src="img/download.svg"></span>
+									</div>
+								</div>
+								<div class="tooltip-body">
+									<table class="table" id="table-0-main">
+										<tbody id="active_project_table">
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-8 text-center">
+							<ul class="d-flex filter pull-right">
+								<li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img
+											src="img/Pie-selected.svg"></a></li>
+								<li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a>
+								</li>
+								<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown"
+										data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img
+											src="img/download.svg"></a>
+									<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+										<a class="dropdown-item" href="#" id="dwn-img-1"> Download graph snapshot</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#" id="dwn-csv-1"> Download CSV</a>
+									</div>
+								</li>
+							</ul>
+							<div id="graph-1">
+								<h5>Funding Source Contribution to Projects</h5>
+								<div class="" id="windows_pie" style="width:100%;height: 350px;"></div>
+							</div>
+							<div id="table-1">
+								<h5>Funding Source Contribution to Projects</h5>
+								<div class="table-responsive">
+									<table class="table table-bordered sdg_table" id="table-1-main">
+										<thead>
+											<tr>
+												<th>Source</th>
+												<th>Value</th>
+											</tr>
+										</thead>
+										<tbody></tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-6">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Projects corresponding to SDGs</h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img
+									src="img/Bar-selected.svg"></a></li>
+						<li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+						<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown"
+								data-toggle="dropdown" aria-expanded="false" id="download-btn-2"><img
+									src="img/download.svg"></a>
+
+							<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+								<a class="dropdown-item" href="#" id="dwn-img-2"> Download graph snapshot</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" id="dwn-csv-2"> Download CSV</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center" id="graph-2">
+							<div class="" id="corresponding_sdgs_bar" style="width:100%;height: 400px;"></div>
+						</div>
+						<div class="col-lg-12" id="table-2">
+							<div class="table-responsive">
+								<table class="table table-bordered sdg_table" id="table-2-main">
+									<thead>
+										<tr>
+											<th>Project</th>
+											<th>Value</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-12 col-lg-6">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Projects corresponding to SDGs</h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="graph-btn-3"><img
+									src="img/Pie-selected.svg"></a></li>
+						<li><a href="javascript:void(0)" class="" id="table-btn-3"><img src="img/Table.svg"></a></li>
+						<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown"
+								data-toggle="dropdown" aria-expanded="false" id="download-btn-3"><img
+									src="img/download.svg"></a>
+
+							<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+								<a class="dropdown-item" href="#" id="dwn-img-3"> Download graph snapshot</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" id="dwn-csv-3"> Download CSV</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center" id="graph-3">
+							<div class="" id="corresponding_sdgs_pie" style="width:100%;height: 400px;"></div>
+						</div>
+						<div class="col-lg-12" id="table-3">
+							<div class="table-responsive">
+								<table class="table table-bordered sdg_table" id="table-3-main">
+									<thead>
+										<tr>
+											<th>Project</th>
+											<th>Value</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-md-12 col-lg-12" id="sdg_framework_chart_container">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<!-- <h5>Country Wise Sdgs</h5> -->
+					<h5>Projects corresponding to countries and SDGs</h5>
+					<ul class="d-flex filter">
+						<li><a role="link" class="active" id="heat_sdg_framework_download"><img
+									src="img/download.svg"></a></li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="row">
+								<div class="col-md-9 col-lg-9 col-sm-12">
+									<div class="" id="sdg_framework" style="width:100%;height: 1500px;">
+									</div>
+								</div>
+								<div class="col-md-3 col-lg-3 col-sm-12">
+									<div id="heat-map-content" class="act-porj-heat-table">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="row"> -->
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Projects corresponding to countries</h5>
+					<ul class="d-flex filter">
+						<li><a role="link" class="active" id="box_chart_sdg_framework_download"><img
+									src="img/download.svg"></a></li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="drilldownChart" style="width:100%;height: 1000px;"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+
+	</div>
+
+	<div class="row">
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Country projects corresponding to SDGs </h5>
+					<ul class="d-flex filter">
+							<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" data-toggle="dropdown" aria-expanded="false" id="Country_sdg_screenshot_download"><img src="img/download.svg"></a>
+
+						
+						</li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="Country_sdg" style="width:100%;height: 350px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Country projects corresponding to Donors</h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="Country_donor_screenshot_download"><img
+									src="img/download.svg"></a></li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="Country_donor" style="width:100%;height: 350px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+
+	<!-- <div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Active Projects </h5>
+				   
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="active_projects_in_country" style="width:100%;height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="row">
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Source of funding contributing to SDGs </h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="Source_of_funding_contributing_to_SDGs_screenshot_download"><img
+									src="img/download.svg"></a></li>
+					
+					</ul>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="Source_of_funding_contributing_to_SDGs" style="width:100%;height: 400px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Funders contribution to SDGs.</h5>
+					<ul class="d-flex filter">
+						<li><a role="link" class="active" id="Funders_contribution_to_SDGs_screenshot_download"><img
+									src="img/download.svg"></a></li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="Funders_contribution_to_SDGs" style="width:100%;height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+
+
+	<div class="row">
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Active projects across countries</h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img
+									src="img/bar-selected.svg"></a></li>
+						<li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+						<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+
+							<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+								<a class="dropdown-item" href="#" id="dwn-img-4"> Download graph snapshot</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" id="dwn-csv-4"> Download CSV</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="w-100 mpContent">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center" id="graph-4">
+							<div class="" id="Active_Projects_across_Countries" style="width:100%;height: 400px;"></div>
+						</div>
+						<div class="col-lg-12" id="table-4">
+							<div class="table-responsive">
+								<table class="table table-bordered sdg_table" id="table-4-main">
+									<thead>
+										<tr>
+											<th>Country</th>
+											<th>Value</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Nature of Funders contribution to SDGs</h5>
+					<ul class="d-flex filter">
+						<li><a href="javascript:void(0)" class="active" id="Nature_of_Funders_contribution_to_SDGs_screenshot_download"><img
+									src="img/download.svg"></a></li>
+						
+					</ul>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12 text-center">
+							<div class="" id="Nature_of_Funders_contribution_to_SDGs" style="width:100%;height: 400px;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="mb-4 p-4">
+				<div class="mpContent-header"> 
+					<em> Note: Some graphs in this page are not supported in Safari. Please use the latest versions of one of the following browsers:  Google Chrome, Firefox, Microsoft Edge, Opera.</em>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <div class="row">
+
+		
+
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="w-100 bradius mb-4 p-4 mpBox">
+				<div class="mpContent-header mb-3">
+					<h5>Active Projects</h5>
+				</div>
+				<div class="w-100 mpContent" id="graph-1">
+					<div class="row align-items-top">
+						<div class="col-lg-12">
+							<div class="table-responsive">
+								<table class="table table-bordered sdg_table">
+									<thead id="sdg_proj_thead">
+										<tr>
+											<th></th>
+											<th data-head_sdgid="1">
+												<span><img src="img/sdgimages/E_01.png"></span>
+											</th>
+
+											<th data-head_sdgid="2">
+												<span><img src="img/sdgimages/E_02.png"></span>
+											</th>
+											<th data-head_sdgid="3">
+												<span><img src="img/sdgimages/E_03.png"></span>
+											</th>
+
+											<th data-head_sdgid="12">
+												<span><img src="img/sdgimages/E_04.jpg"></span>
+											</th>
+											<th data-head_sdgid="4">
+												<span><img src="img/sdgimages/E_05.png"></span>
+											</th>
+
+											<th data-head_sdgid="5">
+												<span><img src="img/sdgimages/E_06.png"></span>
+											</th>
+											<th data-head_sdgid="15">
+												<span><img src="img/sdgimages/E_07.png"></span>
+											</th>
+
+											<th data-head_sdgid="13">
+												<span><img src="img/sdgimages/E_08.png"></span>
+											</th>
+											<th data-head_sdgid="14">
+												<span><img src="img/sdgimages/E_09.png"></span>
+											</th>
+
+											<th data-head_sdgid="6">
+												<span><img src="img/sdgimages/E_10.png"></span>
+											</th>
+											<th data-head_sdgid="7">
+												<span><img src="img/sdgimages/E_11.png"></span>
+											</th>
+
+											<th data-head_sdgid="8">
+												<span><img src="img/sdgimages/E_12.png"></span>
+											</th>
+											<th data-head_sdgid="9">
+												<span><img src="img/sdgimages/E_13.png"></span>
+											</th>
+
+											<th data-head_sdgid="16">
+												<span><img src="img/sdgimages/E_14.png"></span>
+											</th>
+											<th data-head_sdgid="10">
+												<span><img src="img/sdgimages/E_15.png"></span>
+											</th>
+
+											<th data-head_sdgid="17">
+												<span><img src="img/sdgimages/E_16.png"></span>
+											</th>
+											<th data-head_sdgid="11">
+												<span><img src="img/sdgimages/E_17.png"></span>
+											</th>
+										</tr>
+									</thead>
+									<tbody id="sdg_proj_tbody">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</div> -->
+
+
+
+</section>

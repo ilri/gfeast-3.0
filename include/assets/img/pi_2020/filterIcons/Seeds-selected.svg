@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Seeds-selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KPI-Icons" transform="translate(-576.000000, -298.000000)">
+            <g id="Icon/Seeds-selected" transform="translate(572.000000, 295.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="32" height="32"></rect>
+                <path d="M5.82737292,26.570274 C3.98290337,21.0991829 4.94587023,15.9539193 8.71627352,11.1344832 C12.4866768,6.31504707 18.5437496,3.93730475 26.8874921,4.00125624 C28.6114622,11.264851 27.6241036,17.4135888 23.9254163,22.4474696 C20.226729,27.4813505 14.1940479,28.8556187 5.82737292,26.570274 Z" id="Path-10" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(16.314068, 15.820317) scale(-1, 1) rotate(-90.000000) translate(-16.314068, -15.820317) "></path>
+                <path d="M16.1729072,8.47314302 C15.0432512,11.898251 13.7219562,14.9977246 7.87751172,16.7133219" id="Shape" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(12.025209, 12.593232) scale(-1, 1) rotate(-90.000000) translate(-12.025209, -12.593232) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

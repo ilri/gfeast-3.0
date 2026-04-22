@@ -1,0 +1,465 @@
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+  <div class="mpContent-header">
+    <div class="d-flex">
+      <!-- <h5>Learner-Participants trained in all ICRISAT locations</h5> -->
+      <h5>Learners trained at all ICRISAT locations</h5>
+    </div>
+
+    <ul class="d-flex filter">
+      <li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img src="img/Pie-selected.svg"></a></li>
+      <li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a></li>
+      <li><a href="javascript:void(0)" class="trans">|</a></li>
+      <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+          aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+
+        <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+          <a class="dropdown-item" id="dwn-img-1"> Download graph snapshot</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" id="dwn-csv-1"> Download CSV</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="w-100 mpContent" id="graph-1">
+    <div class="row">
+      <div class="col-md-2">
+      <h1 id="totalLP"><span>total</span></h1>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <span class="seed_text_count" id="internsLP"></span>
+          </div>
+          <div class="col-md-6">
+            <span class="seed_text_count">Interns</span>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <span class="seed_text_count" id="scholarsLP"></span>
+          </div>
+          <div class="col-md-6">
+            <span class="seed_text_count">Scholars</span>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <span class="seed_text_count" id="fellowsLP"></span>
+          </div>
+          <div class="col-md-6">
+            <span class="seed_text_count">Fellows</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="mpr-pieChart"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="mpr-pieChart1" style="width: 100%;height: 290px;"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contribution to CRPs -->
+  <div class="w-100 bradius mb-4  mpBox" id="table-1" style="display: none;">
+    <div class="mpContent-header">
+      <div class="d-flex">
+        <h5>ICRISAT location</h5>
+        <span class="ml-2 mr-2">|</span>
+        <div class="dropdown dropdown-user nav-item float-right">
+
+          <select id="lp-summary-country-options" style="border: 0px; outline: 0px;">
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-100 mpContent">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="table-1-main">
+              <thead>
+                <tr class="bg_table">
+                  <th>Year</th>
+                  <th>Learners</th>
+                  <th>Interns</th>
+                  <th>Scholars</th>
+                  <th>Fellows</th>
+                  <th>Male participants</th>
+                  <th>Female participants</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="lp-1-tbody"></tbody>
+              <tfoot id="lp-1-tfoot" style="font-weight: 600;"></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Hybrid / varieties released across countries -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+  <div class="mpContent-header">
+    <!-- <h5>Learner-participants trained across countries</h5> -->
+    <h5>Learners trained across countries</h5>
+    <ul class="d-flex filter">
+      <!-- <li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Map-selected.svg"></a></li>
+      <li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li> -->
+      <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+          aria-expanded="false" id="download-btn-2"><img src="img/download.svg"></a>
+
+        <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px" >
+          <a class="dropdown-item" id="dwn-img-2"> Download graph snapshot</a>
+          <!-- <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"> Download CSV</a> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- <ul class="d-flex crop_check pl-0 mb-4">
+    <li>
+      <label class="msRadio-label text-info"> Category
+        <input type="radio" id="msSingle" name="years-filter">
+        <span class="msRadio-check one"></span>
+      </label>
+    </li>
+    <li>
+      <label class="msRadio-label text-info ml-5"> Gender
+        <input type="radio" id="msMultiple" checked="checked" name="years-filter">
+        <span class="msRadio-check one"></span>
+      </label>
+    </li>
+  </ul> -->
+  <div class="w-100 mpContent" id="graph-2">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div id="mpr-learnerparticipants" style="height: 500px; width: 100%;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Contribution to CRPs -->
+  <div class="w-100 bradius mb-4  mpBox" id="table-2" style="display: none;">
+    <div class="mpContent-header">
+      <div class="d-flex">
+        <h5>ICRISAT location</h5>
+        <span class="ml-2 mr-2">|</span>
+        <div class="dropdown dropdown-user nav-item float-right">
+          <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+            <span class="user-name">India</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-100 mpContent">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Hybrid / varieties released across countries -->
+
+
+<!-- Contribution to CRPs -->
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+  <div class="mpContent-header">
+    <!-- <h5>Country-wise learner participants trained</h5> -->
+    <h5>Country-wise learners trained</h5>
+    <!-- <div class="d-flex">
+      <span class="ml-2 mr-2">|</span>
+      <div class="dropdown dropdown-user nav-item float-right">
+        <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+          <span class="user-name">Category</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="#"><i class="ft-user"></i> Category</a>
+          <a class="dropdown-item" href="#"><i class="ft-power"></i> Gender</a>
+        </div>
+      </div>
+    </div> -->
+    <ul class="d-flex filter">
+      <li><a href="javascript:void(0)" class="active" id="graph-btn-3"><img src="img/Bar-selected.svg"></a></li>
+      <li><a href="javascript:void(0)" class="" id="table-btn-3"><img src="img/Table.svg"></a></li>
+      <li><a href="javascript:void(0)" class="trans">|</a></li>
+      <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown"
+          aria-expanded="false" id="download-btn-3"><img src="img/download.svg"></a>
+
+        <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+          <a class="dropdown-item" id="dwn-img-3"> Download graph snapshot</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" id="dwn-csv-3"> Download CSV</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <ul class="d-flex crop_check pl-0 mb-4">
+        <li>
+          <label class="msRadio-label text-info"> Total
+            <input type="radio" id="msSingle" checked="checked" name="years-filter">
+            <span class="msRadio-check one"></span>
+          </label>
+        </li>
+        <li>
+          <label class="msRadio-label text-info ml-5"> Interns
+            <input type="radio" id="msMultiple" name="years-filter">
+            <span class="msRadio-check one"></span>
+          </label>
+        </li>
+
+        <li>
+          <label class="msRadio-label text-info ml-5"> Scholars
+            <input type="radio" id="msMultiples" name="years-filter">
+            <span class="msRadio-check one"></span>
+          </label>
+        </li>
+
+        <li>
+          <label class="msRadio-label text-info ml-5"> Fellows
+            <input type="radio" id="msMultiples" name="years-filter">
+            <span class="msRadio-check one"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+
+  <div class="w-100 mpContent" id="graph-3">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div id="mpr-mapResearchprogramwiseunderwatershed"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contribution to CRPs -->
+  <div class="w-100 bradius mb-4  mpBox" id="table-3" style="display: none;">
+    <div class="w-100 mpContent">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="table-3-main">
+              <thead>
+                <tr class="bg_table">
+                  <th>Country</th>
+                  <th>Interns</th>
+                  <th>Learners</th>
+                  <th>Fellows</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="table-3-tbody">
+              </tbody>
+              <tfoot id="table-3-tfoot" style="font-weight: 600;"></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Contribution to CRPs -->
+
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+  <div class="mpContent-header mb-3">
+	<h5>Type of learners (year-wise)</h5>
+	 <ul class="d-flex filter">
+	 <li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img src="img/Bar-selected.svg"></a></li>
+   <li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+   <li><a href="javascript:void(0)" class="trans">|</a></li>
+	<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-4"><img src="img/download.svg"></a>
+
+					<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+						<a class="dropdown-item" id="dwn-img-4"> Download graph snapshot</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" id="dwn-csv-4"> Download CSV</a>
+					</div>
+				</li>
+	</ul>
+  </div>
+   <div class="w-100 mpContent" id="graph-4">
+	<div class="row align-items-top">
+	  <div class="col-lg-12">
+		<div id="lp-yearwise-graph"></div>
+	  </div>
+	</div>
+  </div>
+   <div class="w-100 mpContent" id="table-4" style="display: none">
+	  <div class="row align-items-center">
+		  <div class="col-md-12">
+			  <div class="table-responsive">
+				  <table class="table table-striped" id="table-4-main">
+					  <thead>
+						  <tr class="bg-table-1">
+							  <th>Year</th>
+							  <th>Interns</th>
+							  <th>Scholars</th>
+							  <th>Fellows</th>
+							  <th>Total</th>
+						  </tr>
+					  </thead>
+					  <tbody id="table-4-tbody">
+					  </tbody>
+            <tfoot id="table-4-tfoot" style="font-weight: 600;"></tfoot>
+				  </table>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>
+
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+  <div class="mpContent-header mb-3">
+	<h5>Learners by gender desegregation  (Year-wise)</h5>
+	 <ul class="d-flex filter">
+	 <li><a href="javascript:void(0)" class="active" id="graph-btn-5"><img src="img/Bar-selected.svg"></a></li>
+   <li><a href="javascript:void(0)" class="" id="table-btn-5"><img src="img/Table.svg"></a></li>
+   <li><a href="javascript:void(0)" class="trans">|</a></li>
+	<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-5"><img src="img/download.svg"></a>
+
+					<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+						<a class="dropdown-item" id="dwn-img-5"> Download graph snapshot</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" id="dwn-csv-5"> Download CSV</a>
+					</div>
+				</li>
+	</ul>
+  </div>
+   <div class="w-100 mpContent" id="graph-5">
+	<div class="row align-items-top">
+	  <div class="col-lg-12">
+		<div id="lp-yearwise-gender-graph"></div>
+	  </div>
+	</div>
+  </div>
+   <div class="w-100 mpContent" id="table-5" style="display: none">
+	  <div class="row align-items-center">
+		  <div class="col-md-12">
+			  <div class="table-responsive">
+				  <table class="table table-striped" id="table-5-main">
+					  <thead>
+						  <tr class="bg-table-1">
+							  <th>Year</th>
+							  <th>Male participants</th>
+							  <th>Female participants</th>
+							  <th>Total</th>
+						  </tr>
+					  </thead>
+					  <tbody id="table-5-tbody">
+					  </tbody>
+            <tfoot id="table-5-tfoot" style="font-weight: 600;"></tfoot>
+				  </table>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+<!-- CRP ids are null -->
+<!-- <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+  <div class="mpContent-header mb-3">
+	<h5>Participants reached (year-wise and CRP-wise)</h5>
+	 <ul class="d-flex filter">
+	 <li><a href="javascript:void(0)" class="active" id="graph-btn-6"><img src="img/Bar-selected.svg"></a></li>
+   <li><a href="javascript:void(0)" class="" id="table-btn-6"><img src="img/Table.svg"></a></li>
+   <li><a href="javascript:void(0)" class="trans">|</a></li>
+	<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+
+					<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+						<a class="dropdown-item" id="dwn-img-6"> Download graph snapshot</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" id="dwn-csv-6"> Download CSV</a>
+					</div>
+				</li>
+	</ul>
+  </div>
+   <div class="w-100 mpContent" id="graph-6">
+	<div class="row align-items-top">
+	  <div class="col-lg-12">
+		<div id="lp-yearwise-gender-graph"></div>
+	  </div>
+	</div>
+  </div>
+   <div class="w-100 mpContent" id="table-6" style="display: none">
+	  <div class="row align-items-center">
+		  <div class="col-md-12">
+			  <div class="table-responsive">
+				  <table class="table table-striped" id="table-6-main">
+					  <thead>
+						  <tr class="bg-table-1" id="table-6-thead-row">
+						  </tr>
+					  </thead>
+					  <tbody id="table-6-tbody">
+					  </tbody>
+				  </table>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div> -->
+
+<div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+  <div class="mpContent-header mb-3">
+	<h5>Learners by country (Year-wise)</h5>
+	 <ul class="d-flex filter">
+	 <li><a href="javascript:void(0)" class="active" id="graph-btn-7"><img src="img/Bar-selected.svg"></a></li>
+   <li><a href="javascript:void(0)" class="" id="table-btn-7"><img src="img/Table.svg"></a></li>
+   <li><a href="javascript:void(0)" class="trans">|</a></li>
+	<li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-7"><img src="img/download.svg"></a>
+
+					<div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+						<a class="dropdown-item" id="dwn-img-7"> Download graph snapshot</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" id="dwn-csv-7"> Download CSV</a>
+					</div>
+				</li>
+	</ul>
+  </div>
+   <div class="w-100 mpContent" id="graph-7">
+	<div class="row align-items-top">
+	  <div class="col-lg-12">
+		<div id="lp-yearwise-country-graph"></div>
+	  </div>
+	</div>
+  </div>
+   <div class="w-100 mpContent" id="table-7" style="display: none">
+	  <div class="row align-items-center">
+		  <div class="col-md-12">
+			  <div class="table-responsive">
+				  <table class="table table-striped" id="table-7-main">
+					  <thead>
+						  <tr class="bg-table-1" id="table-7-thead-row">
+						  </tr>
+					  </thead>
+					  <tbody id="table-7-tbody">
+					  </tbody>
+            <tfoot id="table-7-tfoot" style="font-weight: 600;"></tfoot>
+				  </table>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>

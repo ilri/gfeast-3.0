@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="23px" viewBox="0 0 27 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Soil-default</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KPI-Icons" transform="translate(-342.000000, -460.000000)">
+            <g id="Icon/Soil-default" transform="translate(339.000000, 455.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="32" height="32"></rect>
+                <path d="M6.4,19.2661704 L8.70931305,16.9343322 C9.0948458,16.5450388 9.6101143,16.3274265 10.1463607,16.3274265 L17.3717344,16.3274265 C18.0543039,16.3274265 18.6076358,16.9053534 18.6076358,17.6182624 C18.6076358,18.3311715 18.0543039,18.9090984 17.3717344,18.9090984 L13.8210032,18.9090984 L20.3828045,18.9090984 L26.6754975,16.1149469 C27.3069788,15.8345496 28.0397653,16.0819991 28.3945554,16.6954436 L28.6013834,17.0530563 C28.9549775,17.6644329 28.825906,18.454147 28.298147,18.9083843 L21.8316608,24.4740287 C21.3380012,24.8989169 20.7182318,25.131268 20.0785514,25.131268 L10.1594165,25.131268 C9.60619932,25.131268 9.06577999,25.305117 8.60843061,25.6302089 L6.4,27.2 L6.4,19.2661704 Z" id="Shape-path" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.64048061,17.862265 C6.87263918,17.0701921 6.4,15.9902914 6.4,14.8 C6.4,12.6892305 7.88629402,10.9256036 9.86940313,10.4985981 C10.6920024,7.66844376 13.3044457,5.6 16.4,5.6 C20.0767146,5.6 23.0718916,8.5180096 23.1959983,12.1644962 C24.9260673,12.6520434 26.2238359,14.171058 26.383448,16.0156841" id="Shape" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" cx="19.6" cy="13.2" r="1"></circle>
+                <circle id="Oval" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" cx="12.4" cy="13.2" r="1"></circle>
+                <circle id="Oval" stroke="#727272" stroke-linecap="round" stroke-linejoin="round" cx="15.6" cy="9.2" r="1"></circle>
+                <path d="M4,19.2 L4,27.2" id="Path-11" stroke="#727272" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

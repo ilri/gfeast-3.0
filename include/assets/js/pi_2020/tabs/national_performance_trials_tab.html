@@ -1,0 +1,853 @@
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<section>
+    <!-- Hybrids / varieties released -->
+    <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-3">
+            <h5>Lines entered in national performance trials</h5>
+            <!-- <a href="javascript:void(0)" class=" mpBtn">Go to indicator <img src="img/button-arrow.svg"></a> -->
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img src="img/Pie-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-1"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-1"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-1">
+            <div class="row align-items-top">
+                <div class="col-lg-4">
+                    <h1>
+                        <div id="totalRecords"></div><span></span>
+                    </h1>
+                    <ul class="mpGraph-list">
+                        <li><span id="breadingMaterialCount"></span>&nbsp;&nbsp;&nbsp;Breeding material
+                            <div class="dropright toogle-tooltip">
+                                <a href="javascript:void(0);" class=" dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"><img src="img/info-icon.svg"></a>
+                                <div class="dropdown-menu">
+                                    <div class="tooltip-header">
+                                        <div class="tooltip-header-title">
+                                            <span>Breeding material</span>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip-body">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody id="tt-br-list"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><span id="hybridLineCount"></span>&nbsp;&nbsp;&nbsp;Hybrid lines
+                            <div class="dropright toogle-tooltip">
+                                <a href="javascript:void(0);" class=" dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"><img src="img/info-icon.svg"></a>
+                                <div class="dropdown-menu">
+                                    <div class="tooltip-header">
+                                        <div class="tooltip-header-title">
+                                            <span>Hybrid lines</span>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip-body">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody id="tt-hl-list"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><span id="germplasmCount"></span>&nbsp;&nbsp;&nbsp;Germplasm
+                            <div class="dropright toogle-tooltip">
+                                <a href="javascript:void(0);" class=" dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"><img src="img/info-icon.svg"></a>
+                                <div class="dropdown-menu">
+                                    <div class="tooltip-header">
+                                        <div class="tooltip-header-title">
+                                            <span>Germplasm</span>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip-body">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody id="tt-gp-list"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="disaggregationView">
+                            <span id="disaggregationCount"></span>&nbsp;&nbsp;&nbsp;Disaggregated data is not &nbsp;&nbsp;&nbsp;available for the year
+                        </li>
+                        <!-- <li><span id="disaggregationCount"></span>&nbsp;&nbsp;&nbsp;Disaggregation not available
+                            <div class="dropright toogle-tooltip">
+                                <a href="javascript:void(0);" class=" dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"><img src="img/info-icon.svg"></a>
+                                <div class="dropdown-menu">
+                                    <div class="tooltip-header">
+                                        <div class="tooltip-header-title">
+                                            <span>Disaggregation not available</span>
+                                        </div>
+                                    </div>
+                                    <div class="tooltip-body">
+                                        <table class="table table-sm table-bordered">
+                                            <tbody id="tt-disagri-list"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <div id="mpr-pieChart"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w-100 mpContent" id="table-1" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-1-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                    <th>Lines</th>
+                                    <th>Number of lines</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-1-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Hybrids / varieties released -->
+    <div class="col-md-12">
+        <!-- Crop-wise hybrids entered in national performance trials -->
+        <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+            <div class="mpContent-header mb-5">
+                <h5>Crop-wise lines entered in national performance trials</h5>
+                <ul class="d-flex filter">
+                    <li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img
+                                src="img/Bar-selected.svg"></a></li>
+                    <li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+                    <li><a href="javascript:void(0)" class="trans">|</a></li>
+                    <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                            data-toggle="dropdown" aria-expanded="false" id="download-btn-4"><img
+                                src="img/download.svg"></a>
+
+                        <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                            <a class="dropdown-item" id="dwn-img-4"> Download graph snapshot</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" id="dwn-csv-4"> Download CSV</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-100 mpContent" id="graph-4">
+                <!-- <div class="row align-items-center">
+                <div class="col-md-8 offset-2"> -->
+                <div id="mpr-mapCropwise_hybrid_entered"></div>
+                <!-- </div>
+            </div> -->
+            </div>
+            <div class="w-100 mpContent" id="table-4" style="display: none">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="table-4-main">
+                                <thead>
+                                    <tr class="bg-table-1">
+                                        <th>Crop</th>
+                                        <th>Breeding Material</th>
+                                        <th>Hybrid Lines</th>
+                                        <th>Germplasm</th>
+                                        <th>Disaggregation not available</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-4-tbody">
+                                </tbody>
+                                <tfoot id="table-4-tfoot" style="font-weight: 600;">
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Crop-wise hybrids entered in national performance trials -->
+    </div>
+
+    <!-- Hybrid / varieties released across countries -->
+    <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-5">
+            <h5>Lines entered in national performance trials across countries</h5>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Map-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-2"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-2"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-2"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-2">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div id="mpr-mapChart" style="height: 500px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-2" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-2-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                    <th>Country</th>
+                                    <th>Number of lines </th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-2-tbody">
+                            </tbody>
+                            <tfoot id="table-2-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Hybrid / varieties released across countries -->
+
+
+    <!-- Comparison of hybrid / varieties released across countries -->
+    <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-5">
+            <h5>Country-wise lines entered in national performance trials</h5>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-3"><img src="img/Bar-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-3"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-3"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-3"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-3"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-3">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div id="mpr-mapComparison"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-3" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-3-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                    <th>Country</th>
+                                    <th>Breeding Material</th>
+                                    <th>Hybrid Lines</th>
+                                    <th>Germplasm</th>
+                                    <th>Disaggregation not available</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-3-tbody">
+                            </tbody>
+                            <tfoot id="table-3-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Hybrid / varieties released across countries -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- //Crop-wise hybrids / varieties released -->
+            <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+                <div class="mpContent-header mb-5">
+                    <div class="d-flex">
+                        <h5>CRP-wise lines entered in national performance trials</h5>
+                    </div>
+                    <ul class="d-flex filter">
+                        <li><a href="javascript:void(0)" class="active" id="graph-btn-8"><img
+                                    src="img/Bar-selected.svg"></a></li>
+                        <li><a href="javascript:void(0)" class="" id="table-btn-8"><img src="img/Table.svg"></a></li>
+                        <li><a href="javascript:void(0)" class="trans">|</a></li>
+                        <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                                data-toggle="dropdown" aria-expanded="false" id="download-btn-8"><img
+                                    src="img/download.svg"></a>
+
+                            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                                <a class="dropdown-item" id="dwn-img-8"> Download graph snapshot</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="dwn-csv-8"> Download CSV</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-100 mpContent" id="graph-8">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div id="mpr-mapCropwise_hybrid_entered_in_national"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 mpContent" id="table-8" style="display: none">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-8-main">
+                                    <thead>
+                                        <tr class="bg-table-1">
+                                            <th>CRP</th>
+                                            <th>Released</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-8-tbody">
+                                    </tbody>
+                                    <tfoot id="table-8-tfoot" style="font-weight: 600;">
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Trait-wise hybrids/varieties released -->
+    <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-5">
+            <!-- <div class="d-flex">
+          <h5>Trait-wise hybrids entered in national performance trials</h5>
+          <span class="ml-2 mr-2">|</span>
+             <div class="dropdown dropdown-user nav-item float-right">
+                  <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                    <span class="user-name">Chickpea</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="ft-user"></i> Finger Millet</a>
+                    <a class="dropdown-item" href="#"><i class="ft-power"></i> Groundnut</a>
+                     <a class="dropdown-item" href="#"><i class="ft-power"></i> Pearl Millet</a>
+                      <a class="dropdown-item" href="#"><i class="ft-power"></i> Pigeonpea</a>
+                       <a class="dropdown-item" href="#"><i class="ft-power"></i> Sorghum</a>
+                  </div>
+              </div>
+        </div> -->
+
+            <div class="d-flex">
+                <h5>Trait-wise lines entered in national performance trials</h5>
+                <span class="ml-2 mr-2">|</span>
+                <div class="dropdown dropdown-user nav-item float-right">
+                    <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <span id="national-performance-crop-name" data-value="0">All Crops</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" id="national-performance-crops">
+                    </div>
+                </div>
+            </div>
+            <ul class="d-flex filter">
+                <!-- <li><a href="javascript:void(0)" class="active" id="graph-btn-5"><img src="img/Bar-selected.svg"></a></li>
+           <li><a href="javascript:void(0)" class=""  id="table-btn-5"><img src="img/Table.svg"></a></li>
+           <li><a href="javascript:void(0)" class="trans">|</a></li> -->
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-5"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-5"> Download graph snapshot</a>
+                        <!-- <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> Download CSV</a> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-5">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div id="mpr-mapTraitwisehybrids"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="mpr-mapTraitwisehybrids_1"></div>
+                </div>
+                <div class="col-md-4">
+                    <div id="mpr-mapNutritional"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-5" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="bg-table-1">
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Trait-wise hybrids/varieties released -->
+
+
+    <!-- Nutritional trait-wise hybrids/varieties released -->
+    <!--<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+      <div class="mpContent-header mb-5">
+          <h5>Nutritional trait-wise hybrids entered in national performance trials</h5>
+        <!-- <div class="d-flex">
+          <span class="ml-2 mr-2">|</span>
+             <div class="dropdown dropdown-user nav-item float-right">
+                  <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                    <span class="user-name">Chickpea</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#"><i class="ft-user"></i> Finger Millet</a>
+                    <a class="dropdown-item" href="#"><i class="ft-power"></i> Groundnut</a>
+                     <a class="dropdown-item" href="#"><i class="ft-power"></i> Pearl Millet</a>
+                      <a class="dropdown-item" href="#"><i class="ft-power"></i> Pigeonpea</a>
+                       <a class="dropdown-item" href="#"><i class="ft-power"></i> Sorghum</a>
+                  </div>
+              </div>
+        </div> --
+         <ul class="d-flex filter">
+         <li><a href="javascript:void(0)" class="active" id="graph-btn-6"><img src="img/Bar-selected.svg"></a></li>
+           <li><a href="javascript:void(0)" class=""  id="table-btn-6"><img src="img/Table.svg"></a></li>
+           <li><a href="javascript:void(0)" class="trans">|</a></li>
+            <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+
+                            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                                <a class="dropdown-item" id="dwn-img-6"> Download graph snapshot</a>
+                                <!-- <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="dwn-csv-6"> Download CSV</a> --
+                            </div>
+                        </li>
+        </ul>
+      </div>
+      <div class="w-100 mpContent" id="graph-6">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+              <div id="mpr-mapNutritional"></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 mpContent" id="table-6" style="display: none">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-6-main">
+                                    <thead>
+                                        <tr class="bg-table-1">
+                                            <th>Nutritional trait</th>
+                                            <th>Entered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-6-tbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>-->
+    <!-- //Nutritional trait-wise hybrids/varieties released -->
+
+    <!-- Crop-wise hybrids / varieties released -->
+    <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+        <div class="mpContent-header mb-5">
+            <h5>Lines entered based on location, crop & traits</h5>
+            <!-- <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-7"><img src="img/Sankey-selected.svg"></a>
+                </li>
+                <!-- <li><a href="javascript:void(0)" class="" id="table-btn-7"><img src="img/Table.svg"></a></li> --
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-7"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-7"> Download graph snapshot</a>
+                        <!-- <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-7"> Download CSV</a> --
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+        <div class="w-100 mpContent" id="graph-7">
+            <!-- <div class="row align-items-center">
+          <div class="col-md-12"> -->
+            <div id="mpr-Hybridsenteredbasedonlocation" style="width: 100%;"></div>
+            <!-- </div>
+        </div> -->
+        </div>
+
+        <div class="w-100 mpContent" id="table-7" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-7-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Nutritional trait-wise hybrids/varieties released -->
+
+    <!-- //Nutritional trait-wise hybrids/varieties released -->
+
+
+
+
+
+
+    <!-- Research program-wise hybrids / varieties released  -->
+    <!-- <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+      <div class="mpContent-header mb-3">
+        <h5>Research program-wise hybrids entered in national performance trials</h5>
+         <ul class="d-flex filter">
+          <li><a href="javascript:void(0)" class="active" id="graph-btn-9"><img src="img/Pie-selected.svg"></a></li>
+           <li><a href="javascript:void(0)" class=""  id="table-btn-9"><img src="img/Table.svg"></a></li>
+           <li><a href="javascript:void(0)" class="trans">|</a></li>
+            <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-9"><img src="img/download.svg"></a>
+
+                            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                                <a class="dropdown-item" href="#"> Download graph snapshot</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> Download CSV</a>
+                            </div>
+                        </li>
+        </ul>
+      </div>
+      <div class="w-100 mpContent" id="graph-9">
+        <div class="row align-items-top">
+          <div class="col-lg-4">
+            <ul class="mpGraph-list" id="rp-legends">
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div id="mpr-pieChartType2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 mpContent" id="table-9" style="display: none">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr class="bg-table-1">
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div> -->
+    <!-- //Research program-wise Lines / varieties released -->
+
+
+    <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+        <div class="mpContent-header mb-3">
+            <h5>Lines entered in national performance trials (year-wise)</h5>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-10"><img src="img/Bar-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-10"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-10"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-10"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-10"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 mpContent" id="graph-10">
+            <div class="row align-items-top">
+                <div class="col-lg-12">
+                    <div id="nt-yearwise-graph"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 mpContent" id="table-10" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-10-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                    <th>Year</th>
+                                    <th>Breeding Material</th>
+                                    <th>Hybrid Lines</th>
+                                    <th>Germplasm</th>
+                                    <th>Disaggregation not available</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-10-tbody">
+                            </tbody>
+                            <tfoot id="table-10-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+        <div class="mpContent-header mb-5">
+            <div class="d-flex">
+                <h5>Comparison of lines entered over years (year-wise)</h5>
+                <span class="ml-2 mr-2">|</span>
+                <div class="dropdown dropdown-user nav-item float-right">
+                    <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <span id="year-comp-crop-name">All Crops</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" id="year-comp-crops">
+
+                    </div>
+                </div>
+            </div>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-11"><img src="img/Bar-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-11"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-11"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-11"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-11"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-100 mpContent" id="graph-11">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div id="nt-year-crop-graph"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-11" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-11-main">
+                            <thead>
+                                <tr class="bg-table-1">
+                                    <th>Year</th>
+                                    <th>Hybrid Lines</th>
+                                    <th>Germplasm</th>
+                                    <th>Breeding Material</th>
+                                    <th>Disaggregation not available</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-11-tbody">
+                            </tbody>
+                            <tfoot id="table-11-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+        <div class="mpContent-header mb-5">
+            <div class="d-flex">
+                <h5>Comparison of lines entered over years (CRPs)</h5>
+                <span class="ml-2 mr-2">|</span>
+                <div class="dropdown dropdown-user nav-item float-right">
+                    <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <span id="year-comp-crp-name">All lines</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" id="year-comp-crps">
+
+                    </div>
+                </div>
+            </div>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-12"><img src="img/Bar-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-12"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-12"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-12"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-12"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-100 mpContent" id="graph-12">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div id="nt-year-crp-graph"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-12" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-12-main">
+                            <thead>
+                                <tr class="bg-table-1" id="table-12-thead-row">
+                                </tr>
+                            </thead>
+                            <tbody id="table-12-tbody">
+                            </tbody>
+                            <tfoot id="table-12-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+        <div class="mpContent-header mb-5">
+            <div class="d-flex">
+                <h5>Comparison of lines entered over years (Country-wise)</h5>
+                <span class="ml-2 mr-2">|</span>
+                <div class="dropdown dropdown-user nav-item float-right">
+                    <a class="dropdown-toggle mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                        <span id="year-comp-country-name">All lines</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" id="year-comp-country">
+
+                    </div>
+                </div>
+            </div>
+            <ul class="d-flex filter">
+                <li><a href="javascript:void(0)" class="active" id="graph-btn-13"><img src="img/Bar-selected.svg"></a>
+                </li>
+                <li><a href="javascript:void(0)" class="" id="table-btn-13"><img src="img/Table.svg"></a></li>
+                <li><a href="javascript:void(0)" class="trans">|</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#"
+                        data-toggle="dropdown" aria-expanded="false" id="download-btn-13"><img
+                            src="img/download.svg"></a>
+
+                    <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+                        <a class="dropdown-item" id="dwn-img-13"> Download graph snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" id="dwn-csv-13"> Download CSV</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-100 mpContent" id="graph-13">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div id="nt-year-country-graph"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 mpContent" id="table-13" style="display: none">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="table-13-main">
+                            <thead>
+                                <tr class="bg-table-1" id="table-13-thead-row">
+                                </tr>
+                            </thead>
+                            <tbody id="table-13-tbody">
+                            </tbody>
+                            <tfoot id="table-13-tfoot" style="font-weight: 600;">
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

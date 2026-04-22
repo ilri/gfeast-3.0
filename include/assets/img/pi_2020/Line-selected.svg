@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="34px" viewBox="0 0 36 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Line-selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Graph-Icons" transform="translate(-635.000000, -559.000000)">
+            <g id="Icon/Line-selected" transform="translate(635.000000, 559.000000)">
+                <rect id="Rectangle" fill="#C76767" x="0" y="0" width="36" height="34" rx="5.20000029"></rect>
+                <polyline id="Path-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="6 24 13.6666667 13.788512 21.3333333 18.894256 29 10"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

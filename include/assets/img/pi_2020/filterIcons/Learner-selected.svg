@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="30px" viewBox="0 0 24 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Learner-selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KPI-Icons" transform="translate(-576.000000, -776.000000)">
+            <g id="Icon/Learner-selected" transform="translate(572.000000, 775.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="32" height="32"></rect>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" cx="15.8444444" cy="13.0017814" rx="6.06666667" ry="6.18947368"></ellipse>
+                <path d="M11.6923077,8.49230769 L11.6923077,4.18461538" id="Path-14" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.3076923,8.49230769 L20.3076923,4.18461538" id="Path-14" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polygon id="Path-15" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="7.38461538 3.04107723 15.4972049 5.04615385 24.6153846 3.29625616 15.7593442 1.6"></polygon>
+                <polygon id="Path-16" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="7.38461538 3.04107723 6.74388445 6.33846154 7.83937844 6.33846154"></polygon>
+                <path d="M11.7198192,20.7916779 C11.7888115,20.7678824 13.9000461,21.7464177 15.9812256,21.7464177 C18.0624051,21.7464177 20.0476821,20.6828951 20.1164804,20.7071681 C23.8691124,22.0311488 26.5777778,25.750716 26.5777778,29.7828742 C26.5777778,29.9197828 26.4655834,30.0307692 26.3271847,30.0307692 L5.67281534,30.0307692 C5.53441658,30.0307692 5.40443211,29.9195524 5.42222222,29.7828742 C6.38614864,22.3772035 11.2900971,20.9398897 11.7198192,20.7916779 Z" id="Path" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

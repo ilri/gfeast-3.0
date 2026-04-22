@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="22px" viewBox="0 0 26 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Grant_White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Grant_White" transform="translate(-3.000000, -5.000000)">
+            <polygon id="Rectangle" fill-opacity="0" fill="#D8D8D8" points="0 0 32 0 32 20.5760673 32 32 0 32"></polygon>
+            <path d="M6.05999994,6.05999994 L26.1962127,6.05999994 C27.3090616,6.05999994 28.2122965,6.96007183 28.2162003,8.0729139 L28.2728888,24.2329137 C28.2768023,25.3485221 27.3755956,26.2560738 26.2599873,26.2599873 C26.2576253,26.2599956 26.2552633,26.2599998 26.2529013,26.2599998 L6.05999994,26.2599998 C4.94438476,26.2599998 4.03999996,25.355615 4.03999996,24.2399998 L4.03999996,8.07999992 C4.03999996,6.96438474 4.94438476,6.05999994 6.05999994,6.05999994 Z" id="Rectangle" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Rectangle" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(18.833571, 20.271794) rotate(17.000000) translate(-18.833571, -20.271794) " points="18.0594246 19.2535556 19.900089 17.5586854 19.7681622 21.7589759 17.7670529 22.9849024"></polygon>
+            <polygon id="Rectangle" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(22.167538, 20.271794) scale(-1, 1) rotate(17.000000) translate(-22.167538, -20.271794) " points="21.3933921 19.2535555 23.2340564 17.5586854 23.1021297 21.7589758 21.1010204 22.9849024"></polygon>
+            <polygon id="Star" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="20.5 17.9167132 18.5865828 18.6193977 17.7304656 16.7695344 15.8806023 15.9134172 16.5832868 14 15.8806023 12.0865828 17.7304656 11.2304656 18.5865828 9.38060234 20.5 10.0832868 22.4134172 9.38060234 23.2695344 11.2304656 25.1193977 12.0865828 24.4167132 14 25.1193977 15.9134172 23.2695344 16.7695344 22.4134172 18.6193977"></polygon>
+            <path d="M8,11 L13,11" id="Line-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8,14 L12,14" id="Line-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

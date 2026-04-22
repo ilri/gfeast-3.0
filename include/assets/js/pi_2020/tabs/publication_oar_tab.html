@@ -1,0 +1,269 @@
+<button id="btnTrigger" data-toggle="modal" style="display: none;" data-target="#myModal"></button>
+<div id="alert"></div>
+<div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts" > 
+    <div class="mpContent-header">
+      <div class="d-flex">
+        <h5>Publications in OAR</h5>
+      </div>
+
+       <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-1"><img src="img/Bar-selected.svg"></a></li>
+         <li><a href="javascript:void(0)" class="" id="table-btn-1"><img src="img/Table.svg"></a></li>
+         <li><a href="javascript:void(0)" class="trans">|</a></li>
+          <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-1"><img src="img/download.svg"></a>
+
+                          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px" >
+                              <a class="dropdown-item" id="dwn-img-1"> Download graph snapshot</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" id="dwn-csv-1"> Download CSV</a>
+                          </div>
+                      </li>
+      </ul>
+    </div>
+    <div class="w-100 mpContent" id="graph-1">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="totalPublishings"><span >papers</span></h1> 
+             <div id="mpr-pieChart" style="height: 400px;width: 100%"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row align-items-center" id="table-1" style="display: none;">
+        <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped" id="table-1-main">
+                <thead>
+                  <tr class="bg_table">
+                    <th>Publication</th>
+                    <th>Number</th>
+                  </tr>
+                </thead>
+                <tbody id="table-1-tbody">
+                </tbody>
+                <tfoot id="table-1-tfoot" style="font-weight: 600;">
+                </tfoot>
+              </table>
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="w-100 bradius mb-4 p-4 mpBox non-yearwisecharts">
+    <div class="mpContent-header">
+      <div class="d-flex">
+        <!-- <h5>Distribution of types of authors across publications</h5> -->
+        <!-- <h5>Author-wise contributions in Publications</h5> -->
+        <h5>Author contributions in Publications</h5>
+      </div>
+
+       <ul class="d-flex filter">
+        <li><a href="javascript:void(0)" class="active" id="graph-btn-2"><img src="img/Pie-selected.svg"></a></li>
+         <li><a href="javascript:void(0)" class="" id="table-btn-2"><img src="img/Table.svg"></a></li>
+         <li><a href="javascript:void(0)" class="trans">|</a></li>
+          <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-2"><img src="img/download.svg"></a>
+
+                          <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px" >
+                              <a class="dropdown-item" id="dwn-img-2"> Download graph snapshot</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" id="dwn-csv-2"> Download CSV</a>
+                          </div>
+                      </li>
+      </ul>
+    </div>
+    <div class="w-100 mpContent"  id="graph-2">
+      <div class="row">
+        <div class="col-md-6">
+              <h1 id="total_authors"><span>total</span></h1>
+                <div class="row mt-4">
+                  <div class="col-md-2">
+                    <span class="seed_text_count" id="icrisat_authors"></span> %
+                  </div>
+                  <div class="col-md-6">
+                    <span class="seed_text_count">Published by ICRISAT authors</span>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-md-2">
+                    <span class="seed_text_count" id="nars"></span> %
+                  </div>
+                  <div class="col-md-6">
+                    <span class="seed_text_count">Published by NARS</span>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-md-2">
+                    <span class="seed_text_count" id="womens"></span> %
+                  </div>
+                  <div class="col-md-6">
+                    <span class="seed_text_count">Published by Women</span>
+                  </div>
+                </div>
+        </div>
+        <div class="col-md-6">
+             <div id="mpr-pieChart1" style="height: 400px;width: 100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center" id="table-2" style="display: none;">
+        <div class="col-md-12">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped" id="table-2-main">
+                <thead>
+                  <tr class="bg_table">
+                    <th>Distribution Type</th>
+                    <th>Number</th>
+                  </tr>
+                </thead>
+                <tbody id="table-2-tbody">
+                </tbody>
+                <tfoot id="table-2-tfoot" style="font-weight: 600;"></tfoot>
+              </table>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-3">
+    <h5>Publications (year-wise)</h5>
+     <ul class="d-flex filter">
+     <li><a href="javascript:void(0)" class="active" id="graph-btn-4"><img src="img/Bar-selected.svg"></a></li>
+     <li><a href="javascript:void(0)" class="" id="table-btn-4"><img src="img/Table.svg"></a></li>
+     <li><a href="javascript:void(0)" class="trans">|</a></li>
+    <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-4"><img src="img/download.svg"></a>
+  
+            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+              <a class="dropdown-item" id="dwn-img-4"> Download graph snapshot</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="dwn-csv-4"> Download CSV</a>
+            </div>
+          </li>
+    </ul>
+    </div>
+     <div class="w-100 mpContent" id="graph-4">
+    <div class="row align-items-top">
+      <div class="col-lg-12">
+      <div id="pub-yearwise-graph"></div>
+      </div>
+    </div>
+    </div>
+     <div class="w-100 mpContent" id="table-4" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-4-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Year</th>
+                  <th>Publications</th>
+                </tr>
+              </thead>
+              <tbody id="table-4-tbody">
+              </tbody>
+              <tfoot id="table-4-tfoot" style="font-weight: 600;"></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-3">
+    <!-- <h5>Types of authors (year-wise)</h5> -->
+    <h5>Author affiliation (year-wise)</h5>
+     <ul class="d-flex filter">
+     <li><a href="javascript:void(0)" class="active" id="graph-btn-5"><img src="img/Bar-selected.svg"></a></li>
+     <li><a href="javascript:void(0)" class="" id="table-btn-5"><img src="img/Table.svg"></a></li>
+     <li><a href="javascript:void(0)" class="trans">|</a></li>
+    <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-5"><img src="img/download.svg"></a>
+  
+            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+              <a class="dropdown-item" id="dwn-img-5"> Download graph snapshot</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="dwn-csv-5"> Download CSV</a>
+            </div>
+          </li>
+    </ul>
+    </div>
+     <div class="w-100 mpContent" id="graph-5">
+    <div class="row align-items-top">
+      <div class="col-lg-12">
+      <div id="pub-auth-yearwise-graph"></div>
+      </div>
+    </div>
+    </div>
+     <div class="w-100 mpContent" id="table-5" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-5-main">
+              <thead>
+                <tr class="bg-table-1">
+                  <th>Year</th>
+                  <th>Published by ICRISAT authors</th>
+                  <th>Published by NARS</th>
+                  <th>Published by Women</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="table-5-tbody">
+              </tbody>
+              <tfoot id="table-5-tfoot" style="font-weight: 600;"></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="w-100 bradius mb-4 p-4 mpBox yearWiseChart">
+    <div class="mpContent-header mb-3">
+    <h5>Publications by country (year-wise)</h5>
+     <ul class="d-flex filter">
+     <li><a href="javascript:void(0)" class="active" id="graph-btn-6"><img src="img/Bar-selected.svg"></a></li>
+     <li><a href="javascript:void(0)" class="" id="table-btn-6"><img src="img/Table.svg"></a></li>
+     <li><a href="javascript:void(0)" class="trans">|</a></li>
+    <li><a href="javascript:void(0)" class="dropdown-toggle drop_hide mhDropdown" href="#" data-toggle="dropdown" aria-expanded="false" id="download-btn-6"><img src="img/download.svg"></a>
+  
+            <div class="dropdown-menu drop_hover dropdown-menu-right mt-5px">
+              <a class="dropdown-item" id="dwn-img-6"> Download graph snapshot</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" id="dwn-csv-6"> Download CSV</a>
+            </div>
+          </li>
+    </ul>
+    </div>
+     <div class="w-100 mpContent" id="graph-6">
+    <div class="row align-items-top">
+      <div class="col-lg-12">
+      <div id="pub-auth-yearwise-graph"></div>
+      </div>
+    </div>
+    </div>
+     <div class="w-100 mpContent" id="table-6" style="display: none">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped" id="table-6-main">
+              <thead>
+                <tr class="bg-table-1" id="table-6-thead-row">
+                </tr>
+              </thead>
+              <tbody id="table-6-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->

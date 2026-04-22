@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Pie</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Graph-Icons" transform="translate(-440.000000, -490.000000)">
+            <g id="Icon/Pie" transform="translate(434.000000, 485.000000)">
+                <rect id="Rectangle" fill-opacity="0" fill="#D5D3D3" x="0" y="0" width="36" height="34" rx="5.20000029"></rect>
+                <circle id="Oval" fill="#C76767" cx="18" cy="17" r="12"></circle>
+                <polyline id="Path-3" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round" points="18 5 18 17 9.85087961 25.8268696"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
