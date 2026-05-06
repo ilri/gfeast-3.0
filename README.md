@@ -11,29 +11,11 @@ The application is built on **CodeIgniter 3** (PHP) and runs on a standard WAMP 
 
 ## About the project
 
-**G‑FEAST** is the gendered version of the **Feed Assessment Tool (FEAST)**. It aims to identify the aspects of
-gender relations in households that affect animal feeding practices, the uptake of feeding interventions, and
-the differences in opportunities and constraints in animal feeding between different household types.
+The FEAST Data Application is a software utility for collecting and analysing data related to smallholder farming communities’ livestock feed resources. The software was developed in 2009 and is intended for use in conjunction with the wider FEAST methodology, which involves holding focus group discussions and one-on-one interviews with farmers to get their input on local conditions, feed-related problems and potential solutions.
 
-The **FEAST Data Application** is a software utility for collecting and analysing data related to smallholder
-farming communities' livestock feed resources. The software was originally developed in 2009 and is intended
-for use in conjunction with the **Farmer‑Centred Diagnosis** research methodology, which involves holding focus
-group discussions and one‑on‑one interviews with farmers to get their input on local conditions, feed‑related
-problems and potential solutions.
+G-FEAST is the gendered version of the Feed Assessment Tool (FEAST) which aims to identify the aspects of gender relations in households that affect animal feeding practices, the uptake of feeding interventions, and differences in opportunities and constraints in animal feeding between different household types.
 
-Use of FEAST helped farmers, extension workers and researchers to fully diagnose and understand problems and
-potential interventions in animal feeding. However, one of the challenges with the original FEAST methodology
-was that it was based on very technical aspects (including rainfall patterns, types and breeds of livestock,
-livestock product markets and the quantities that farmers sold), while the complex gender dynamics in
-feed/forage provision were **not** integrated into the methodology of FEAST application.
-
-As a result, the analysis of gender relations was excluded from feed assessments, making it difficult to
-integrate gendered feed interventions. Following this shortcoming, **ILRI** (the International Livestock
-Research Institute) and the **International Center for Agricultural Research in the Dry Areas (ICARDA)**, in
-collaboration with the **Royal Tropical Institute (KIT)**, designed a gender‑responsive approach to feed
-assessment — the **G‑FEAST** tool — in 2016.
-
-📖 Read more: <https://www.ilri.org/news/gendered-feed-assessment-tool-g-feast>
+Use of FEAST helps farmers, extension workers and researchers to fully diagnose and understand problems and potential interventions in animal feeding. FEAST 3.0 consists of a mobile application for collecting data in the field. This interfaces with a web-based dashboard which allows data management and visualization.
 
 ---
 
