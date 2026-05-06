@@ -251,11 +251,6 @@ Base URL: `https://<host>/api/<controller>/<method>`
 |---------------------------|----------------------------------------------------------------|
 | `api/Auth`                | Login / token issuance for the mobile client                   |
 | `api/Sync` (`download`/`upload`) | Two‑way sync between the device and server (see [api/Sync.php](application/controllers/api/Sync.php)) |
-| `api/Sync_msoil`          | Sync variant for the *mSoil* dataset                           |
-| `api/Client`              | Client / partner directory APIs                                |
-| `api/Data`                | Generic lookup / reference data feed                           |
-| `api/Users`               | User profile & device tracking                                 |
-| `api/Agency`              | Agency / partner organisation APIs                             |
 
 Sync requests post a JSON body with at least `purpose` (`download` or `upload`),
 `user_id` and `unit_id`. Optional `limit` arrays restrict which lookup tables are
