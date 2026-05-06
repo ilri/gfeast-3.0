@@ -1,27 +1,57 @@
 # G‑Feast 3.0
 
-G‑Feast 3.0 is the web admin console and REST API backend for the **G‑Feast** agricultural value‑chain / farmer‑profiling platform. It is the server‑side counterpart of the
-[G‑Feast 3.0 Android app](https://play.google.com/store/apps/details?id=org.gfeast.unmiti) and is used to manage organizations, projects, centres, partners, surveys,
-beneficiaries and lookup data, and to sync data to/from field devices.
+G‑Feast 3.0 is the web admin console and REST API backend for the **G‑FEAST** (Gendered Feed Assessment Tool)
+platform. It is the server‑side counterpart of the [G‑Feast 3.0 Android app](https://play.google.com/store/apps/details?id=org.gfeast.unmiti)
+and is used to manage organizations, projects, centres, partners, surveys, beneficiaries and lookup data,
+and to sync data to/from field devices.
 
 The application is built on **CodeIgniter 3** (PHP) and runs on a standard WAMP / LAMP stack with MySQL.
 
 ---
 
+## About the project
+
+**G‑FEAST** is the gendered version of the **Feed Assessment Tool (FEAST)**. It aims to identify the aspects of
+gender relations in households that affect animal feeding practices, the uptake of feeding interventions, and
+the differences in opportunities and constraints in animal feeding between different household types.
+
+The **FEAST Data Application** is a software utility for collecting and analysing data related to smallholder
+farming communities' livestock feed resources. The software was originally developed in 2009 and is intended
+for use in conjunction with the **Farmer‑Centred Diagnosis** research methodology, which involves holding focus
+group discussions and one‑on‑one interviews with farmers to get their input on local conditions, feed‑related
+problems and potential solutions.
+
+Use of FEAST helped farmers, extension workers and researchers to fully diagnose and understand problems and
+potential interventions in animal feeding. However, one of the challenges with the original FEAST methodology
+was that it was based on very technical aspects (including rainfall patterns, types and breeds of livestock,
+livestock product markets and the quantities that farmers sold), while the complex gender dynamics in
+feed/forage provision were **not** integrated into the methodology of FEAST application.
+
+As a result, the analysis of gender relations was excluded from feed assessments, making it difficult to
+integrate gendered feed interventions. Following this shortcoming, **ILRI** (the International Livestock
+Research Institute) and the **International Center for Agricultural Research in the Dry Areas (ICARDA)**, in
+collaboration with the **Royal Tropical Institute (KIT)**, designed a gender‑responsive approach to feed
+assessment — the **G‑FEAST** tool — in 2016.
+
+📖 Read more: <https://www.ilri.org/news/gendered-feed-assessment-tool-g-feast>
+
+---
+
 ## Table of contents
 
-1. [Features](#features)
-2. [Tech stack](#tech-stack)
-3. [Repository layout](#repository-layout)
-4. [Requirements](#requirements)
-5. [Installation](#installation)
-6. [Configuration](#configuration)
-7. [Running the app](#running-the-app)
-8. [REST API (mobile sync)](#rest-api-mobile-sync)
-9. [Modules / controllers](#modules--controllers)
-10. [Uploads & storage](#uploads--storage)
-11. [Deployment](#deployment)
-12. [Privacy & licensing](#privacy--licensing)
+1. [About the project](#about-the-project)
+2. [Features](#features)
+3. [Tech stack](#tech-stack)
+4. [Repository layout](#repository-layout)
+5. [Requirements](#requirements)
+6. [Installation](#installation)
+7. [Configuration](#configuration)
+8. [Running the app](#running-the-app)
+9. [REST API (mobile sync)](#rest-api-mobile-sync)
+10. [Modules / controllers](#modules--controllers)
+11. [Uploads & storage](#uploads--storage)
+12. [Deployment](#deployment)
+13. [Privacy & licensing](#privacy--licensing)
 
 ---
 
